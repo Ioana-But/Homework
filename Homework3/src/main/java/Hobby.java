@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Hobby implements IAddress{
+public class Hobby{
 
     private String hobbyName;
     private int frequency;
@@ -25,14 +25,4 @@ public class Hobby implements IAddress{
         this.frequency = frequency;
     }
 
-
-    @Override
-    public void add(String city) {
-
-    }
-
-    @Override
-    public List<Address> getAll() {
-        return null;
-    }
 }

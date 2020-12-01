@@ -33,17 +33,44 @@ public class Main {
             System.out.println(e);
         }
 
+        List<Address> hobbyAddress1 = new ArrayList<>();
+
+        List<Hobby> hobbyList1 = new ArrayList<>();
+
+        Map<Person, List<Hobby>> personsHobbyMap = new HashMap<>();
+
+        //person1 hobby address and hobby list
+        hobbyAddress1.add(new Address("Wien", 23, Country.AT));
+        hobbyList1.add(new Hobby("Skying", 2));
+        personsHobbyMap.put(person1,hobbyList1);
+
+        //person2
+        List<Address> hobbyAddress2 = new ArrayList<>();
+        List<Hobby> hobbyList2 = new ArrayList<>();
+        hobbyAddress2.add(new Address("Rome", 158, Country.IT));
+        hobbyList2.add(new Hobby("Fashion shows", 3));
+        personsHobbyMap.put(person2,hobbyList2);
+
+
+        //person3
+        List<Address> hobbyAddress3 = new ArrayList<>();
+        List<Hobby> hobbyList3 = new ArrayList<>();
+        hobbyAddress3.add(new Address("Amsterdam", 337, Country.NL));
+        hobbyList3.add(new Hobby("Traveling", 2));
+        personsHobbyMap.put(person3,hobbyList3);
+
+
+        //person4
+        List<Address> hobbyAddress4 = new ArrayList<>();
+        List<Hobby> hobbyList4 = new ArrayList<>();
+        hobbyAddress4.add(new Address("Valencia", 74, Country.ES));
+        hobbyList4.add(new Hobby("Gastronomy", 5));
+        personsHobbyMap.put(person4,hobbyList4);
+
+        personsHobbyMap.forEach((key, value) -> System.out.println("Person " + key + " Hobbies: " + Arrays.toString(value.toArray())));
+
+
     }
 
-    List<address> hobbyAddress = new ArrayList<>();
-        hobbyAddress.add("Park");
-        hobbyAddress.add("Court");
-        hobbyAddress.add("Stadium");
-        hobbyAddress.add("Gym");
 
-    Map<Person, List<Hobby>> personsHobbyMap = new HashMap<>();
-      personsHobbyMap.put(person1, hobbyList1);
-      personsHobbyMap.put(person2, hobbyList2);
-      personsHobbyMap.put(person3, hobbyList3);
-      personsHobbyMap.put(person4, hobbyList4);
 }
