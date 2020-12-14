@@ -2,16 +2,16 @@ package catalog;
 
 public enum SportType {
 
-    VOLLEYBALL("Volleyball", 'Y'),
-    TENNIS("Tennis", 'N'),
-    CHESS("Chess", 'N'),
-    SWIMMING("Swimming", 'N'),
-    FOOTBALL("Football", 'Y');
+    VOLLEYBALL("Volleyball", Boolean.TRUE),
+    TENNIS("Tennis", Boolean.FALSE),
+    CHESS("Chess", Boolean.FALSE),
+    SWIMMING("Swimming", Boolean.FALSE),
+    FOOTBALL("Football", Boolean.TRUE);
 
     private final String name;
-    private final char teamSport;
+    private final Boolean teamSport;
 
-    SportType(String name, char teamSport) {
+    SportType(String name, Boolean teamSport) {
         this.name = name;
         this.teamSport = teamSport;
     }
